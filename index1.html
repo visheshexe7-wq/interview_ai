@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Interview Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>404 Ninjas – AI Interview Platform</h1>
+
+        <div id="main-question-panel">
+            <h2 id="question-text">Press Start to begin the interview</h2>
+            <input type="text" id="answer-input" placeholder="Type your answer here" />
+            <button id="submit-btn">Submit Answer</button>
+        </div>
+
+        <div id="brain-teaser-panel" class="hidden">
+            <h2 id="brain-teaser-text"></h2>
+            <input type="text" id="brain-answer-input" placeholder="Type your answer here" />
+            <button id="brain-submit-btn">Submit Brain Teaser</button>
+        </div>
+
+        <div id="next-question-panel" class="hidden">
+            <button id="next-btn">Next Question</button>
+        </div>
+
+        <div id="final-score" class="hidden">
+            <h2>Final Score</h2>
+            <p id="score-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
