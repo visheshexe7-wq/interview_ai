@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Interview Simulator</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+.container{
+margin-top:80px;
+background:white;
+padding:30px;
+width:500px;
+margin-left:auto;
+margin-right:auto;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+button{
+padding:10px 20px;
+margin-top:15px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>AI Interview System</h2>
+
+<p id="question">Click Start Interview</p>
+
+<textarea id="answer" rows="4" cols="40"></textarea>
+<br>
+
+<button onclick="startInterview()">Start Interview</button>
+<button onclick="submitAnswer()">Submit Answer</button>
+
+<p id="score"></p>
+
+</div>
+
+<script>
+
+let questions=[
+"What is REST API?",
+"Explain load balancing",
+"Difference between SQL and NoSQL?"
+]
+
+function startInterview(){
+
+let random=Math.floor(Math.random()*questions.length)
+
+document.getElementById("question").innerText=questions[random]
+
+}
+
+function submitAnswer(){
+
+let ans=document.getElementById("answer").value
+
+if(ans.length>20){
+
+document.getElementById("score").innerText="Good Answer (Score 5)"
+
+}else{
+
+document.getElementById("score").innerText="Answer too short"
+
+}
+  document.addEventListener("visibilitychange", function(){
+
+if(document.hidden){
+
+alert("Tab switch detected! Focus on interview")
+
+}
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
